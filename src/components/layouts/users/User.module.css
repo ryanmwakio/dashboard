@@ -1,0 +1,18 @@
+.user {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  width: 100%;
+  border-radius: 7px;
+  margin: 0.5rem;
+}
+
+.username {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.extra-info {
+  font-size: 0.7rem;
+}
