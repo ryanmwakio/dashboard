@@ -120,7 +120,7 @@ function AddUserForm(props) {
       },
     };
 
-    const req = axios.put(`${baseUrl}/users`, userData);
+    const req = axios.patch(`${baseUrl}/users`, userData);
     const res = await req;
 
     req.then(
@@ -133,17 +133,17 @@ function AddUserForm(props) {
         setTimeout(() => {
           setShowPrompt(false);
         }, 2000);
-        // setLoading(false);
-        // setName("");
-        // setUserName("");
-        // setEmail("");
-        // setStreet("");
-        // setSuite("");
-        // setCity("");
-        // setPhone("");
-        // setWebsite("");
-        // setCompanyName("");
-        // setCompanyMotto("");
+        setLoading(false);
+        setName("");
+        setUserName("");
+        setEmail("");
+        setStreet("");
+        setSuite("");
+        setCity("");
+        setPhone("");
+        setWebsite("");
+        setCompanyName("");
+        setCompanyMotto("");
       },
       (err) => err
     );

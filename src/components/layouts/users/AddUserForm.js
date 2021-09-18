@@ -241,7 +241,7 @@ function AddUserForm() {
       </div>
 
       <div className="form">
-        <button type="submit" className="btn btn-success btn-sm">
+        <button type="submit" className="btn btn-primary btn-sm">
           {loading ? "Loading..." : "Add User"}
         </button>
       </div>
