@@ -14,16 +14,23 @@ export const getUsers = (users) => {
   };
 };
 
-export const updateUser = (user) => {
+export const selectedUser = (user) => {
   return {
-    type: ActionTypes.UPDATE_USER,
+    type: ActionTypes.SELECTED_USER,
     payload: user,
   };
 };
 
-export const deleteUser = (user) => {
+export const updateUser = (users) => {
+  return {
+    type: ActionTypes.UPDATE_USER,
+    payload: users,
+  };
+};
+
+export const deleteUser = (users) => {
   return {
     type: ActionTypes.DELETE_USER,
-    payload: user,
+    payload: users,
   };
 };

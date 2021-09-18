@@ -1,6 +1,6 @@
 .vertical-nav {
   width: 100%;
-  height: auto;
+  height: 100%;
   left: 0;
   background: var(--primary-white);
   border-right: 1px solid rgba(0, 0, 0, 0.1);

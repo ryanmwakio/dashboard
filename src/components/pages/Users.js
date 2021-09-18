@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
@@ -10,48 +10,63 @@ import User from "../layouts/users/User";
 import { getUsers } from "../../redux/actions/userActions";
 
 function Users() {
+  const baseUrl = "https://jsonplaceholder.typicode.com";
+
   const users = useSelector((state) => state.userReducer.users);
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
 
   const fetchUsers = async () => {
-    const response = await axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .catch((err) => {
-        console.error("Error", err);
-      });
-    dispatch(getUsers(response.data));
+    const req = axios.get(`${baseUrl}/users`);
+
+    const res = await req;
+
+    req.then(
+      () => {
+        setLoading(false);
+        return dispatch(getUsers(res.data));
+      },
+      (err) => err
+    );
   };
 
   useEffect(() => {
     fetchUsers();
+    return () => {};
     // eslint-disable-next-line
   }, []);
 
   return (
     <Fragment>
       <div className={classes.users}>
-        <div>
-          <TopBar>
-            <h4>Users</h4>
-            <button className="btn btn-sm btn-outline-dark">add user</button>
-          </TopBar>
-          <div className="row mt-4">
-            {users.map((user) => {
-              return (
-                <User
-                  key={user.id}
-                  name={user.name}
-                  email={user.email}
-                  phone={user.phone}
-                  username={user.username}
-                  website={user.website}
-                  address={user.address}
-                  myClasses="col-md-3 col-sm-6"
-                />
-              );
-            })}
+        {users && (
+          <div>
+            <TopBar>
+              <h4>Users</h4>
+              <button className="btn btn-sm btn-outline-dark">add user</button>
+            </TopBar>
+            <div className="row mt-4">
+              {loading && <p>Loading...</p>}
+
+              {users &&
+                users.map((user) => {
+                  return (
+                    <User
+                      key={user.id}
+                      id={user.id}
+                      name={user.name}
+                      email={user.email}
+                      phone={user.phone}
+                      username={user.username}
+                      website={user.website}
+                      address={user.address}
+                      myClasses="col-md-3 col-sm-6"
+                    />
+                  );
+                })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </Fragment>
   );
