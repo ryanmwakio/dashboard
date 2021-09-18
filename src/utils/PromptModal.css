@@ -1,0 +1,23 @@
+.prompt {
+  z-index: 100;
+  padding: 0.7rem 0.5rem 0rem 0.5rem;
+  background: rgba(255, 214, 160, 0.823);
+  position: fixed;
+  top: 3%;
+  left: 30%;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: rgb(157, 101, 28);
+  transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+  .prompt {
+    width: 50%;
+  }
+}

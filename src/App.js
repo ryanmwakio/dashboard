@@ -7,8 +7,12 @@ import "./App.css";
 import Card from "./components/UI/Card";
 import VerticalNav from "./components/layouts/VerticalNav";
 import Home from "./components/pages/Home";
+
 import Users from "./components/pages/Users";
 import UserDetail from "./components/pages/UserDetail";
+import AddUser from "./components/pages/AddUser";
+import UpdateUser from "./components/pages/UpdateUser";
+
 import Posts from "./components/pages/Posts";
 import Todos from "./components/pages/Todos";
 import Albums from "./components/pages/Albums";
@@ -39,9 +43,14 @@ function App() {
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/albums" exact component={Albums} />
+
                 <Route path="/users" exact component={Users} />
                 <Route path="/users/:id" exact component={UserDetail} />
+                <Route path="/add-user" exact component={AddUser} />
+                <Route path="/update-user/:id" exact component={UpdateUser} />
+
                 <Route path="/todos" exact component={Todos} />
+
                 <Route path="/posts" exact component={Posts} />
                 <Route>
                   <Error />

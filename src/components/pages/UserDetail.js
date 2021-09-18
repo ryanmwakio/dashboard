@@ -65,7 +65,7 @@ function UserDetail(props) {
     <Fragment>
       <div className={classes["user-detail"]}>
         <Link to="/users" className="btn btn-outline-dark  btn-sm m-2">
-          Go Back
+          back to users
         </Link>
         {loading && <p>Loading...</p>}
         {!user && <p>An error ocurred please go back to users</p>}
@@ -97,7 +97,12 @@ function UserDetail(props) {
                 >
                   delete
                 </button>
-                <button className="btn btn-success btn-sm mx-2">update</button>
+                <Link
+                  to={`/update-user/${user.id}`}
+                  className="btn btn-success btn-sm mx-2"
+                >
+                  update
+                </Link>
               </div>
             </div>
           </Card>

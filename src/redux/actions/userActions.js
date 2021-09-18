@@ -1,9 +1,9 @@
 import { ActionTypes } from "../constants/action-types";
 
-export const createUser = (user) => {
+export const createUser = (users) => {
   return {
     type: ActionTypes.POST_USER,
-    payload: user,
+    payload: users,
   };
 };
 

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
@@ -23,12 +24,14 @@ function Users() {
 
     req.then(
       () => {
+        dispatch(getUsers(res.data));
         setLoading(false);
-        return dispatch(getUsers(res.data));
       },
       (err) => err
     );
   };
+
+  const paginatedUsers = users.slice(0, 6);
 
   useEffect(() => {
     fetchUsers();
@@ -43,13 +46,15 @@ function Users() {
           <div>
             <TopBar>
               <h4>Users</h4>
-              <button className="btn btn-sm btn-outline-dark">add user</button>
+              <Link to="/add-user" className="btn btn-sm btn-outline-dark">
+                add user
+              </Link>
             </TopBar>
             <div className="row mt-4">
               {loading && <p>Loading...</p>}
 
               {users &&
-                users.map((user) => {
+                paginatedUsers.map((user) => {
                   return (
                     <User
                       key={user.id}

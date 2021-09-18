@@ -1,0 +1,9 @@
+.add-user {
+  width: 100%;
+  height: auto;
+  left: 0;
+  background: var(--primary-white);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3rem 1.5rem 3rem 0;
+  transition: all 0.5s;
+}
