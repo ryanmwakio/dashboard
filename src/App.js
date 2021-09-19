@@ -17,6 +17,7 @@ import Posts from "./components/pages/Posts";
 import Todos from "./components/pages/Todos";
 import Albums from "./components/pages/Albums";
 import Error from "./components/pages/Error";
+import PostDetail from "./components/pages/PostDetail";
 
 function App() {
   const [isVerticalNavOpen, setIsVerticalNavOpen] = useState(true);
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/todos" exact component={Todos} />
 
                 <Route path="/posts" exact component={Posts} />
+                <Route path="/posts/:id" exact component={PostDetail} />
                 <Route>
                   <Error />
                 </Route>

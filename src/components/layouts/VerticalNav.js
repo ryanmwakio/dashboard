@@ -37,14 +37,7 @@ function VerticalNav() {
               <span>Users</span>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/posts">
-              <i>
-                <FontAwesomeIcon icon={faBlog} />
-              </i>
-              <span>Posts</span>
-            </NavLink>
-          </li>
+
           <li>
             <NavLink to="/albums">
               <i>
@@ -59,6 +52,14 @@ function VerticalNav() {
                 <FontAwesomeIcon icon={faList} />
               </i>
               <span>Todos</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/posts">
+              <i>
+                <FontAwesomeIcon icon={faBlog} />
+              </i>
+              <span>Posts</span>
             </NavLink>
           </li>
         </ul>

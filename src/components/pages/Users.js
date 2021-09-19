@@ -69,6 +69,7 @@ function Users() {
   return (
     <Fragment>
       <div className={classes.users}>
+        {loading && <p>Loading...</p>}
         {users && (
           <div>
             <TopBar>
@@ -78,8 +79,6 @@ function Users() {
               </Link>
             </TopBar>
             <div className="row mt-4">
-              {loading && <p>Loading...</p>}
-
               {users && displayUsers}
               <div className={classes.paginationContainer}>
                 <ReactPaginate
