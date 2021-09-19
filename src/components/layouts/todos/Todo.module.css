@@ -1,0 +1,9 @@
+.todo {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  width: 100%;
+  border-radius: 7px;
+  margin: 0.5rem;
+  overflow: hidden;
+}
