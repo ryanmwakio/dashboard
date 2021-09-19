@@ -62,8 +62,8 @@ function Posts() {
     <Fragment>
       <div className={classes.posts}>
         <h4>Posts</h4>
+        {loading && <p>Loading...</p>}
         <div className="row mt-4">
-          {loading && <p>Loading...</p>}
           {posts && displayPosts}
           <div className={classes.paginationContainer}>
             <ReactPaginate
