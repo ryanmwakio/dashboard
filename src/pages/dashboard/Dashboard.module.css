@@ -1,0 +1,30 @@
+.HomeDashBoardCard {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.6rem;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0.2rem;
+}
+
+.sub-title {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.total {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0.2rem;
+}

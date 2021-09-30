@@ -1,0 +1,24 @@
+.photo {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  width: 100%;
+  border-radius: 7px;
+  margin: 0.5rem;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.photo p {
+  font-size: 0.6rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.photoContainer {
+  width: 100%;
+}

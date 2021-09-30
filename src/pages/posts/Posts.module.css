@@ -1,0 +1,46 @@
+.posts {
+  width: 100%;
+  height: auto;
+  left: 0;
+  background: var(--primary-white);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3rem 1.5rem 3rem 0;
+  transition: all 0.5s;
+}
+
+.paginationBttns {
+  height: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 5px;
+  margin: 2px;
+  border-radius: 3px;
+  border: 1px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+  font-size: 0.6rem;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationDisabled a {
+  color: grey;
+  background-color: grey;
+}
+
+.paginationContainer {
+  position: absolute;
+  bottom: 2%;
+}
