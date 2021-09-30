@@ -36,6 +36,22 @@ export const addUserAsync = createAsyncThunk(
 	}
 );
 
+export const updateUserAsync = createAsyncThunk(
+	'users/updateUserAsync',
+	async (payload) => {
+		try {
+			const req=axios.patch(`${baseUrl}/users`,payload);
+			const resp = await req;
+	
+			const users = await resp.data;
+			return { users };
+	
+		} catch (err) {
+			console.error(err);
+		}
+	}
+);
+
 export const deleteUserAsync = createAsyncThunk(
 	'users/deleteUserAsync',
 	async (userId) => {

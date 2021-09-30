@@ -19,6 +19,7 @@ import VerticalNav from './UI/VerticalNav';
 import PostDetail from './pages/posts/PostDetail';
 import UserDetail from './pages/users/UserDetail';
 import AddUser from './pages/users/AddUser';
+import UpdateUser from './pages/users/UpdateUser';
 
 
 
@@ -57,6 +58,7 @@ function App() {
 
               <Route path="/users" exact component={Users} />
               <Route path="/add-user" exact component={AddUser} />
+              <Route path="/update-user/:id" exact component={UpdateUser} />
               <Route path="/users/:id" exact component={UserDetail} />
 
               <Route path="/albums" exact component={Albums} />
