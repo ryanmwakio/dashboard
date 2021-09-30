@@ -1,0 +1,69 @@
+/*----Styling by http://github.com/ryanmwakio-----*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+@font-face {
+  font-family: Open-Sans;
+  src: url(./assets/fonts/OpenSans-Regular.ttf);
+}
+
+/*-----CSS reset-----*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*-----Global Variables-----*/
+:root {
+  --primary-color: #ffefe2;
+  --secondary-color: #ffdef7;
+  --tertiary-color: #effcef;
+
+  --primary-white: #fff;
+  --primary-black: #000;
+
+  --primary-grey: #f6f6f6;
+}
+
+/*-----styles-----*/
+
+html,
+body {
+  background: var(--primary-grey);
+  font-size: 16px;
+  font-family: "Open Sans", Open-Sans, sans-serif;
+}
+
+.main {
+  background: var(--primary-grey);
+  padding: 0.5rem;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.toggle-vertical-nav {
+  position: absolute;
+  top: 5%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--primary-black);
+  left: 6%;
+  z-index: 5;
+}
+
+@media (max-width: 576px) {
+  .main {
+    padding: 0.5rem 0;
+  }
+
+  .toggle-vertical-nav {
+    left: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-vertical-nav {
+    top: 1%;
+  }
+}
